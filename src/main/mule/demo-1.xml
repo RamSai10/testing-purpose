@@ -23,5 +23,8 @@ payload	]]></ee:set-payload>
 		<logger level="INFO" doc:name="Logger" doc:id="0295deb8-f955-464a-afac-efd09d4c2132" message="${messages1}"/>
 		<logger level="INFO" doc:name="Logger" doc:id="c6daa5da-8c28-43b0-8d0d-26b06cfdd552" message="${messages2}"/>
 		<logger level="INFO" doc:name="Logger" doc:id="0a1790fd-487e-4265-8cd7-48e87f2ad988" message="${messages3}"/>
+		<logger level="INFO" doc:name="Logger" doc:id="c3abf467-e532-4667-a7ba-d45cdc1d426d" message="${messages4}"/>
+		<logger level="INFO" doc:name="Logger" doc:id="ea7b7d7e-3c90-4342-9a16-8f744f883814" message="${messages5}"/>
+		<logger level="INFO" doc:name="Logger" doc:id="2d38489d-84d7-4595-a696-53fb9dea046e" message="${messages6}"/>
 	</flow>
 </mule>
