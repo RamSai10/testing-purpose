@@ -22,5 +22,6 @@ payload	]]></ee:set-payload>
 		<logger level="INFO" doc:name="Logger" doc:id="790d2bb7-3053-4142-b69b-a1253de5277a" message="${messages}"/>
 		<logger level="INFO" doc:name="Logger" doc:id="0295deb8-f955-464a-afac-efd09d4c2132" message="${messages1}"/>
 		<logger level="INFO" doc:name="Logger" doc:id="c6daa5da-8c28-43b0-8d0d-26b06cfdd552" message="${messages2}"/>
+		<logger level="INFO" doc:name="Logger" doc:id="0a1790fd-487e-4265-8cd7-48e87f2ad988" message="${messages3}"/>
 	</flow>
 </mule>
