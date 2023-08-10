@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="351ef09a-4440-4da2-9d92-35cc65d51f27" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<configuration-properties doc:name="Configuration properties" doc:id="2ba7146d-1bbb-48e3-b594-e3f0050a2c56" file="config.yaml" />
+	<flow name="demo-1Flow" doc:id="b66cf5f2-7440-42c8-89fa-39e2cdb013a6" >
+		<http:listener doc:name="Listener" doc:id="4734e744-ccd3-4375-82ff-3696c34220b4" config-ref="HTTP_Listener_config" path="/sam"/>
+		<ee:transform doc:name="Transform Message" doc:id="ba9bf185-1de8-4ebf-91bb-c5df45fb03cb" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+payload	]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="790d2bb7-3053-4142-b69b-a1253de5277a" message="${message}"/>
+	</flow>
+</mule>
